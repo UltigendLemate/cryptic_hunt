@@ -1,0 +1,128 @@
+// Variables
+$primary-color: #f2f2f2;
+$secondary-color: #222;
+
+// css
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Montserrat";
+}
+
+.nav__top {
+	height: 8vh;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: $secondary-color;
+}
+
+.nav__top--logo {
+	margin-left: 40px;
+	font-size: 20px;
+	text-transform: uppercase;
+}
+
+.nav__top--list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	list-style: none;
+	margin-right: 40px;
+
+	li {
+		a {
+			color: $primary-color;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 16px;
+			margin-left: 40px;
+		}
+	}
+}
+
+.logout {
+	color: $primary-color;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	margin-left: 40px;
+	cursor: pointer;
+}
+
+#content-area {
+	width: 100vw;
+	height: 92vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	h1 {
+		margin-bottom: 40px;
+		font-size: 35px;
+		text-transform: uppercase;
+		font-weight: 800;
+	}
+}
+
+.login-form {
+	padding: 20px;
+	border-radius: 10px;
+	box-shadow: 0 0 4px #999;
+
+	button {
+		margin-top: 30px;
+		background-color: lighten($secondary-color, 15%);
+		&:hover {
+			background-color: $secondary-color;
+		}
+	}
+}
+
+.error-toast {
+	background-color: #c62828;
+	font-weight: 400;
+}
+
+.success-toast {
+	background-color: #388e3c;
+	font-weight: 400;
+}
+
+.question-form {
+	text-align: center;
+	margin-top: 40px;
+	button {
+		margin-top: 30px;
+		background-color: $secondary-color;
+	}
+}
+
+.hint {
+	font-style: italic;
+	font-size: 17px;
+	margin-top: 20px;
+}
+
+.leaderboard {
+	margin: 20px 40px;
+}
+
+tr {
+	font-size: 18px;
+}
+
+td {
+	font-size: 14px;
+	color: #666;
+}
+
+.home-cta {
+	background-color: lighten($secondary-color, 15%);
+	box-shadow: none;
+	&:hover {
+		background-color: $secondary-color;
+	}
+}
