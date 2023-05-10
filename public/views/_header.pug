@@ -1,0 +1,11 @@
+header
+  nav.nav__top
+    a.nav__top--logo(href="/") ROUNDTABLE
+    ul.nav__top--list
+      li: a(href="/leaderboard") Leaderboard
+      if user
+        li: a(href="/play") Play 
+        li: .logout(onclick='checkLogout()')= `@${user.username}`
+      else 
+        li: a(href="/login") Login
+
