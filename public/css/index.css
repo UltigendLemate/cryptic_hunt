@@ -2,22 +2,22 @@
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-family: "Montserrat";
 }
 
 .nav__top {
   /* height: 8vh; */
-  height: auto;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
   /* background-color: #222; */
 }
 
@@ -32,11 +32,11 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   list-style: none;
   margin-right: 40px;
 }
@@ -66,14 +66,14 @@
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
 }
 
 
@@ -90,7 +90,7 @@
   padding: 20px;
   border-radius: 10px;
   -webkit-box-shadow: 0 0 4px #999;
-          box-shadow: 0 0 4px #999;
+  box-shadow: 0 0 4px #999;
 }
 
 .login-form button {
@@ -141,10 +141,64 @@ td {
 .home-cta {
   background-color: #1b0094;
   -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 
 .home-cta:hover {
   background-color: #222;
 }
+
 /*# sourceMappingURL=index.css.map */
+
+
+
+/* vaibhav strats */
+
+.hamburger {
+  height: 60px;
+  position: fixed;
+  z-index: 200;
+  top: 10px;
+  right: 10px;
+  padding: 4px;
+  border: black solid 1px;
+  background: black;
+  cursor: pointer;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.menu {
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.2s;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: black;
+  color: white;
+  list-style: none;
+  padding-top: 4rem;
+}
+
+.showMenu {
+  transform: translateY(0);
+}
+
+@media screen and (max-width: 768px) {
+  .logout {
+    color: #f2f2f2;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    /* 24px */
+    line-height: 2rem;
+    /* 32px */
+    margin-left: 0px;
+    cursor: pointer;
+  }
+}
