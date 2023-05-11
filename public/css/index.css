@@ -61,7 +61,7 @@
 #content-area {
   width: 100vw;
   overflow-x: hidden;
-  min-height: 85vh;
+  min-height: calc(100vh - 80px);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -212,4 +212,6 @@ td {
 
 .bgall {
   background-image: url('../img/bg.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
