@@ -46,7 +46,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
-  margin-left: 40px;
+  margin-left: 20px;
 }
 
 .logout {
@@ -54,7 +54,7 @@
   text-decoration: none;
   text-transform: uppercase;
   font-size: 16px;
-  margin-left: 40px;
+  margin-left: 20px;
   cursor: pointer;
 }
 
