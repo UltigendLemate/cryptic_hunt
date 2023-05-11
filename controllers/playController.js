@@ -17,7 +17,7 @@ exports.getQuestion = catchAsync(async (req, res, next) => {
 	if (req.user.level + 1 >= (await getTotalQuestions())) {
 		return res.status(200).json({
 			status: "success",
-			message: "Congratulations you have completed cypher!",
+			message: "Congratulations you have completed Aurora3.0!",
 		});
 	}
 
@@ -82,7 +82,7 @@ exports.checkAnswer = catchAsync(async (req, res, next) => {
 
 		return res.status(200).json({
 			status: "success",
-			message: "Congratulations you have completed cypher!",
+			message: "Congratulations you have completed Aurora 3.0!",
 		});
 	}
 
