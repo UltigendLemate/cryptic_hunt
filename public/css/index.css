@@ -8,6 +8,9 @@
 
 .nav__top {
   /* height: 8vh; */
+  /* width: 100vh !important; */
+  /* overflow-x: hidden; */
+
   height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -60,6 +63,7 @@
 
 #content-area {
   width: 100vw;
+  overflow-x: hidden ;
   min-height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,7 +124,7 @@
 
 .hint {
   font-style: italic;
-  font-size: 17px;
+  /* font-size: 17px; */
   margin-top: 20px;
 }
 
