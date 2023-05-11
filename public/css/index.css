@@ -168,7 +168,8 @@ td {
   cursor: pointer;
 }
 
-.hamburger:active, .hamburger:visited{
+.hamburger:active,
+.hamburger:visited {
   background: transparent !important;
 }
 
