@@ -1,11 +1,27 @@
 header
-  nav(class="nav__top bg-black flex-col md:flex-row")
-    a.nav__top--logo.font-bold(href="/") Aurora 3.0
-    ul.nav__top--list
-      li: a(href="/leaderboard") Leaderboard
+  nav(class="nav__top bg-black flex-row")
+    a(class = 'nav__top--logo font-bold' href="/") Aurora 3.0
+    div
+    ul(class = 'nav__top--list ')
+      li: a(href="/leaderboard" class='md:block hidden') Leaderboard
       if user
-        li: a(href="/play") Play 
-        li: .logout(onclick='checkLogout()')= `@${user.username}`
+        li: a(href="/play" class='md:block hidden') Play 
+        li: .logout(onclick='checkLogout()' class='md:block hidden')= `@${user.username}`
       else 
         li: a(href="/login") Login
 
+      li(class = 'md:hidden block')
+        button.hamburger(class = 'md:hidden block')
+          i.menuIcon.material-icons(style="display: block;") menu
+          i.closeIcon.material-icons(style="display: none;") close
+
+body
+  div.menu(class='flex items-center justify-center text-center')
+    ul(class = 'text-white space-y-5 text-2xl pb-60')
+      li: a(href="/leaderboard" class='') Leaderboard
+      if user
+        li: a(href="/play" class='') Play 
+        li: .logout(onclick='checkLogout()' class='')= `@${user.username}`
+      else 
+        li: a(href="/login") Login
+  
