@@ -209,3 +209,7 @@ td {
     cursor: pointer;
   }
 }
+
+.bgall {
+  background-image: url('../img/bg.gif');
+}
