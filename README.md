@@ -1,4 +1,4 @@
-# Cypher- The Cryptic Hunt
+# Aurora 3.0- The Cryptic Hunt
 
 ***A full stack website to host and deploy online cryptic/treasure hunts***
 

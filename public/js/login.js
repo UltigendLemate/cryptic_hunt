@@ -12,7 +12,7 @@ const loginUser = async (username, password) => {
 			},
 		});
 		M.toast({
-			html: `Welcome to cypher. You will be redirected soon.`,
+			html: `Welcome to Aurora 3.0. You will be redirected soon.`,
 			classes: "success-toast",
 		});
 		setTimeout(() => {
