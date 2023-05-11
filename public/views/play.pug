@@ -2,17 +2,16 @@ extends base
 
 block content 
   if question.completed
-    h2 Congratulations!
+    h2.text-5xl Congratulations!
   else 
-    h3 Level #{question.level}
-    h4= question.problem
+    h3.text-5xl.font-bold Level #{question.level}
+    h4.text-3xl.mt-10= question.problem
     p.hint Hint:  #{question.hint}
 
     form.question-form
-      label.login-form__username Answer
-      input#answer(type='text' name='answer' placeholder='Your answer here!' required)
+      input#answer.text-center(type='text' name='answer' placeholder='Your answer here!' required)
 
-      button(class="btn waves-effect waves-light" type="submit" name="action") Submit
+      button(class="btn mt-6 mx-auto waves-effect waves-light px-3 text-white grid rounded-md bg-gradient-to-r from-sky-600 to-indigo-500 justify-center item-center py-2 tracking-widest text-xl font-semibold" type="submit" name="action") Submit
 
 block append scripts
   script(src="/js/submitQuestion.js")
