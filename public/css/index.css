@@ -7,7 +7,8 @@
 }
 
 .nav__top {
-  height: 8vh;
+  /* height: 8vh; */
+  height: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -17,7 +18,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  background-color: #222;
+  /* background-color: #222; */
 }
 
 .nav__top--logo {
@@ -59,7 +60,7 @@
 
 #content-area {
   width: 100vw;
-  height: 92vh;
+  min-height: 85vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,6 +75,9 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+
+
+
 
 #content-area h1 {
   margin-bottom: 40px;
@@ -113,10 +117,6 @@
   margin-top: 40px;
 }
 
-.question-form button {
-  margin-top: 30px;
-  background-color: #222;
-}
 
 .hint {
   font-style: italic;
@@ -130,15 +130,16 @@
 
 tr {
   font-size: 18px;
+  box-shadow: #fef 0px 0px 1px;
 }
 
 td {
   font-size: 14px;
-  color: #666;
+  /* color: #666; */
 }
 
 .home-cta {
-  background-color: #484848;
+  background-color: #1b0094;
   -webkit-box-shadow: none;
           box-shadow: none;
 }

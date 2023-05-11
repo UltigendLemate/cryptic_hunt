@@ -6,15 +6,17 @@ html(lang='en')
     link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet")
     link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
     link(type="text/css" href="/css/index.css" rel="stylesheet")
+    script(src='https://cdn.tailwindcss.com')
+    
     script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
     title Cypher | #{title}
 
-  body
+  body.bg-gray-900
     // HEADER
     include _header
 
     // BODY
-    #content-area
+    #content-area.text-white
       block content
 
     // SCRIPTS

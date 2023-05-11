@@ -5,6 +5,10 @@ const responseSchema = new mongoose.Schema({
 		type: String,
 		maxlength: 200,
 	},
+	answeredAt:{
+		type: Date,
+		default: Date.now,
+	},
 	username: {
 		type: String,
 	},
