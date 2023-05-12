@@ -18,16 +18,16 @@ function toggleMenu() {
 
 hamburger.addEventListener("click", toggleMenu);
 
-function getCursor(event) {
-    let x = event.clientX;
-    let y = event.clientY;
-    let _position = `X: ${x}<br>Y: ${y}`;
-    console.log(x, y)
-    const infoElement = document.getElementById('info');
-    infoElement.innerHTML = _position;
-    infoElement.style.top = y + "px";
-    infoElement.style.left = (x + 20) + "px";
-}
+// function getCursor(event) {
+//     let x = event.clientX;
+//     let y = event.clientY;
+//     let _position = `X: ${x}<br>Y: ${y}`;
+//     console.log(x, y)
+//     const infoElement = document.getElementById('info');
+//     infoElement.innerHTML = _position;
+//     infoElement.style.top = y + "px";
+//     infoElement.style.left = (x + 20) + "px";
+// }
 
 import * as THREE from "https://cdn.skypack.dev/three@0.133.1/build/three.module";
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/controls/OrbitControls';
