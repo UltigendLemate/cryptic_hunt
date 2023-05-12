@@ -11,7 +11,7 @@ header
         li: a(href="/play" class='md:block hidden hover:text-cyan-300 duration-200') Play 
         li: .logout(onclick='checkLogout()' class='md:block hidden hover:text-cyan-300 duration-200')= `@${user.username}`
       else 
-        li: a(href="/login") Login
+        li: a(href="/login" class='hover:text-cyan-300 duration-200') Login
 
       li(class = 'md:hidden block')
         button.hamburger(class = 'md:hidden block')
