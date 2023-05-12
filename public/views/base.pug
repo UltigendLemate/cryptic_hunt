@@ -13,9 +13,8 @@ html(lang='en')
     title Aurora 3.0 | #{title}
 
 
-  body(class='backdrop-blur-3xl h-[100vh]' id='your-element-selector')
-    div(class='backdrop-blur-3xl')
-    
+  body( class='relative'  )
+    div( class='absolute top-0 bottom-0 left-0 right-0 -z-10' id='container')
     // HEADER
     include _header
 
@@ -27,23 +26,8 @@ html(lang='en')
     block scripts
       script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
       script(src='/js/logout.js')
-      script(src="/js/base.js")
-      script(src="/js/three.r134.min.js")
-      script(src="/js/vanta.waves.min.js")
-      script.
-        VANTA.WAVES({
-            el: "#your-element-selector",
-            mouseControls: true,
-            touchControls: true,
-            gyroControls: false,
-            minHeight: 200.00,
-            minWidth: 200.00,
-            scale: 1.00,
-            scaleMobile: 1.00,
-            color: 0x0,
-            waveHeight: 17.50,
-            waveSpeed: 0.01
-        })
+      script(type="module" src="/js/base.js" )
+      
 
 
 
