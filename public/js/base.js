@@ -28,7 +28,6 @@ hamburger.addEventListener("click", toggleMenu);
 //     infoElement.style.top = y + "px";
 //     infoElement.style.left = (x + 20) + "px";
 // }
-
 import * as THREE from "https://cdn.skypack.dev/three@0.133.1/build/three.module";
 import { OrbitControls } from "https://cdn.skypack.dev/three@0.133.1/examples/jsm/controls/OrbitControls";
 import { EffectComposer } from "https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/EffectComposer";
@@ -126,6 +125,7 @@ class Particles {
             alphaTest: 0.5,
             transparent: true,
         });
+
         this.material.color.setHSL(1.0, 0.3, 0.7);
 
         this.particles = new THREE.Points(this.geometry, this.material);
