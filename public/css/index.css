@@ -244,6 +244,7 @@ canvas {
 #container {
   width: 100vw !important;
   height: 100vh !important;
+  background-color: black;
 }
 
 body::-webkit-scrollbar {
