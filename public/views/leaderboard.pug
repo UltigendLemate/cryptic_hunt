@@ -8,12 +8,12 @@ mixin tableElement(rank, name, level)
 
 block content 
   h1(class='pt-16') leaderboard
-  table(class="text-white centered leaderboard mb-[50px] ")
+  table(class="text-white centered leaderboard pb-[30px] pb-[50px] overflow-y-auto max-h-[50vh]")
     thead
       tr
         th Rank
         th Name
         th Level
-    tbody
+    tbody(class='')
       each user, index in users
         +tableElement(`${index + 1}`, user.username, user.level)
