@@ -11,10 +11,6 @@ const questionSchema = new mongoose.Schema({
 		lowercase: true,
 		select: false,
 	},
-	hint: {
-		type: String,
-		required: [true, "Please provide user hint!"],
-	},
 	level: {
 		type: Number,
 		min: 0,

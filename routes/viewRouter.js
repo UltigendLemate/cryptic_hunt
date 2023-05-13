@@ -32,6 +32,21 @@ router.get("/", (req, res) => {
 		title: "Home",
 	});
 });
+router.get("/henrycreel", (req, res) => {
+	res.status(200).render("henry", {
+		title: "Creeeeel",
+	});
+});
+router.get("/cpag", (req, res) => {
+	res.status(200).render("cpag", {
+		title: "The King",
+	});
+});
+router.get("/donaldmustard", (req, res) => {
+	res.status(200).render("don", {
+		title: "Donald",
+	});
+});
 
 router.use(userController.protect);
 

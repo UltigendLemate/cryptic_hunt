@@ -60,7 +60,10 @@
   margin-left: 20px;
   cursor: pointer;
 }
-
+#content-area h3{
+  padding : 0 20px;
+  text-align : center;
+}
 #content-area {
   width: 100vw;
   overflow-x: hidden;
