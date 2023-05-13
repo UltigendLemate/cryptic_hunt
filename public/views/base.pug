@@ -10,12 +10,15 @@ html(lang='en')
     script(src='https://cdn.tailwindcss.com')
     script(type="module" src="/js/base.js" )
     //- script(src="/js/require.js") 
-    
+
+    //- adding favicon
+    link(rel='icon', href='/favicon.ico', type='image/x-icon')
+
     script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
     title Aurora 3.0 | #{title}
 
 
-  body( class='bgall backdrop-blur-3xl h-[100vh]'  )
+  body( class='bgall backdrop-blur-3xl min-h-[100vh]'  )
     //- div( class='absolute top-0 bottom-0 left-0 right-0 -z-10 max-h-[100vh] max-w-[100vw] imp' id='container')
     // HEADER
     include _header
