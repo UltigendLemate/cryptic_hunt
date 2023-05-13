@@ -30,19 +30,19 @@ hamburger.addEventListener("click", toggleMenu);
 //     infoElement.style.left = (x + 20) + "px";
 // }
 
-// import * as THREE from "https://cdn.skypack.dev/three@0.133.1/build/three.module";
-// import { OrbitControls } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/controls/OrbitControls';
-// import { EffectComposer } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/EffectComposer';
-// import { RenderPass } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/RenderPass';
-// import { UnrealBloomPass } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/UnrealBloomPass';
+import * as THREE from "https://cdn.skypack.dev/three@0.133.1/build/three.module";
+import { OrbitControls } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/controls/OrbitControls';
+import { EffectComposer } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/EffectComposer';
+import { RenderPass } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/RenderPass';
+import { UnrealBloomPass } from 'https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/UnrealBloomPass';
 
 
 
-const THREE = require("https://cdn.skypack.dev/three@0.133.1/build/three.module");
-const { OrbitControls } = require("https://cdn.skypack.dev/three@0.133.1/examples/jsm/controls/OrbitControls");
-const { EffectComposer } = require("https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/EffectComposer");
-const { RenderPass } = require("https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/RenderPass");
-const { UnrealBloomPass } = require("https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/UnrealBloomPass");
+// const THREE = require("https://cdn.skypack.dev/three@0.133.1/build/three.module");
+// const { OrbitControls } = require("https://cdn.skypack.dev/three@0.133.1/examples/jsm/controls/OrbitControls");
+// const { EffectComposer } = require("https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/EffectComposer");
+// const { RenderPass } = require("https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/RenderPass");
+// const { UnrealBloomPass } = require("https://cdn.skypack.dev/three@0.133.1/examples/jsm/postprocessing/UnrealBloomPass");
 
 
 
