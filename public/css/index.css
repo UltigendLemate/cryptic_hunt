@@ -6,9 +6,11 @@
   font-family: "Montserrat";
 }
 
+
+
 .nav__top {
   /* height: 8vh; */
-  height: 80px;
+  height: 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -18,6 +20,7 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  /* border-bottom: 1px solid white; */
   /* background-color: #222; */
 }
 
@@ -156,10 +159,10 @@ td {
 /* vaibhav strats */
 
 .hamburger {
-  height: 60px;
+  height: 40px;
   position: fixed;
   z-index: 200;
-  background: transparent !important;
+  /* background: transparent !important; */
   top: 10px;
   right: 10px;
   padding: 4px;
@@ -215,4 +218,30 @@ td {
   background-image: url('../img/bg.gif');
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.imp {
+  max-width: 100vw !important;
+  max-height: 100vh !important;
+  height: 100vh !important;
+  width: auto !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+#container {
+  width: 100vw !important;
+  height: 100vh !important;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+  /* width of the entire scrollbar */
 }
