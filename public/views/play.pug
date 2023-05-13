@@ -8,7 +8,8 @@ block content
       h2.text-5xl Congratulations!
     else 
       h3.text-5xl.font-bold Level #{question.level}
-      h4(class = "text-lg text-center md:text-3xl mt-10")= question.problem
+      h4(class = "text-lg text-center md:text-3xl mt-10" id="problemStatement")
+        | !{question.problem}
       if question.level == 15
         p(class="invisible") Hint here : lnkiy.in
       //- p(class="hint text-md md:text-2xl") Hint:  #{question.hint}
@@ -19,4 +20,4 @@ block content
         button(class="btn mt-6 mx-auto waves-effect waves-light px-3 text-white grid rounded-md bg-gradient-to-r from-sky-600 to-indigo-500 justify-center item-center py-2 tracking-widest text-xl font-semibold" type="submit" name="action") Submit
 
 block append scripts
-  script(src="/js/submitQuestion.js")
+  script(src="/js/playfile.js")
