@@ -10,7 +10,8 @@
   "author": "elit-altum",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "webpack-cli": "^5.1.1"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
@@ -22,6 +23,7 @@
     "mongoose": "^5.9.16",
     "pug": "^3.0.0",
     "three": "^0.152.2",
+    "webpack": "^5.82.1",
     "xss-clean": "^0.1.1"
   }
 }
