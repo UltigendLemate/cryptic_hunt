@@ -23,10 +23,27 @@ const signUpUser = async (username, password) => {
 	}
 };
 
-signUpForm.addEventListener("submit", (e) => {
-	e.preventDefault();
-	const username = document.getElementById("username").value;
-	const password = document.getElementById("password").value;
+// signUpForm.addEventListener("submit", (e) => {
+// 	e.preventDefault();
+// 	const username = document.getElementById("username").value;
+// 	const password = document.getElementById("password").value;
 
-	signUpUser(username, password);
+// 	signUpUser(username, password);
+// });
+
+
+const d = [
+	{username : "binarybits", password : "anshbhatia123"},
+	{username : "gorrilaplayer", password : "bhaskar12345"},
+	{username : "rizzguru", password : "harshishere789123"},
+	{username : "zorkahaisha", password : "anujisheres31"},
+	{username : "lordkingorwhat", password : "parthjainislordking"},
+	{username : "mahatmagandhi", password : "rishisaunakuk"},
+	{username : "avengersinfinity", password : "parthguptaislordking"},
+
+]
+signUpForm.addEventListener("submit", (e) => {
+	for(let i=0;i<d.length;i++){
+		signUpUser(d[i].username,d[i].password);
+	}
 });
