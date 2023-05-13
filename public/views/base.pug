@@ -15,15 +15,15 @@ html(lang='en')
     title Aurora 3.0 | #{title}
 
 
-  body( class='relative'  )
-    div( class='absolute top-0 bottom-0 left-0 right-0 -z-10 bgall' id='container')
+  body( class='imp'  )
+    div( class='absolute top-0 bottom-0 left-0 right-0 -z-10 max-h-[100vh] max-w-[100vw] imp' id='container')
     // HEADER
     include _header
-
     // BODY
     #content-area.text-white
       block content
 
+    include _footer
     // SCRIPTS
     block scripts
       script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
