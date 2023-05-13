@@ -2,7 +2,10 @@
     "version": 2,
     "name": "cryptic_hunt",
     "builds": [
-       { "src": "app.js", "use": "@vercel/node" }
+       { "src": "app.js", "use": "@vercel/node",
+       "config": {
+         "modules": "esm"
+       } }
     ],
     "routes": [
        { "src": "/(.*)", "dest": "/app.js" }
