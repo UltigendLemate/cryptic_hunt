@@ -1,30 +1,32 @@
 header
-  nav(class="nav__top bg-black flex-row")
+  nav(class="nav__top bg-[#0E0E0E] flex-row ")
     a(class = 'nav__top--logo font-bold' href="/") Aurora 3.0
     div
     ul(class = 'nav__top--list  ')
-      li(class='hover:text-cyan-600 duration-200')
-        a(href="/" class='md:block hidden') 
-          img(src="../img/discord.svg", alt="" class='h-[40px]')
+      //- li(class='hover:text-cyan-600 duration-200')
+      //-   a(href="/" class='md:block hidden') 
+      //-     img(src="../img/discord.svg", alt="" class='h-[40px]')
       li: a(href="/leaderboard" class='md:block hidden hover:text-cyan-300 duration-200') Leaderboard
+      li: a(href="/leaderboard" class='md:block hidden hover:text-cyan-300 duration-200') Discord
       if user
         li: a(href="/play" class='md:block hidden hover:text-cyan-300 duration-200') Play 
         li: .logout(onclick='checkLogout()' class='md:block hidden hover:text-cyan-300 duration-200')= `@${user.username}`
       else 
-        li: a(href="/login") Login
+        li: a(href="/login" class='hover:text-cyan-300 duration-200') Login
 
       li(class = 'md:hidden block')
-        button.hamburger(class = 'md:hidden block')
+        button.hamburger(class = 'md:hidden block flex items-center')
           i.menuIcons.material-icons(style="display: block;") menu
           i.closeIcons.material-icons(style="display: none;") close
 
 body
   div.menu(class='flex items-center justify-center text-center')
     ul(class = 'text-white space-y-5 text-2xl pb-60')
-      li(class='flex justify-center hover:text-cyan-300 duration-200')
-        a(href="/" class='') 
-          img(src="../img/discord.svg", alt="" class='')
+      //- li(class='flex justify-center hover:text-cyan-300 duration-200')
+      //-   a(href="/" class='') 
+      //-     img(src="../img/discord.svg", alt="" class='')
       li: a(href="/leaderboard" class='hover:text-cyan-300 duration-200') Leaderboard
+      li: a(href="/leaderboard" class='hover:text-cyan-300 duration-200') Discord
       if user
         li: a(href="/play" class='hover:text-cyan-300 duration-200') Play 
         li: .logout(onclick='checkLogout()' class='hover:text-cyan-300 duration-200')= `@${user.username}`

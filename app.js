@@ -4,6 +4,8 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const helmet = require("helmet");
 const xss = require("xss-clean");
+const favicon = require('serve-favicon');
+
 
 const userRouter = require("./routes/userRouter");
 const questionsRouter = require("./routes/questionsRouter");
@@ -15,6 +17,11 @@ const AppError = require("./utils/appError");
 const errHandler = require("./utils/errorHandler");
 
 const app = express();
+
+// adding favicon 
+app.use(favicon(path.join(__dirname, 'public', 'img', 'favicon.ico')));
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.set("view engine", "pug");
 app.set("views", path.join(__dirname, "public", "views"));
 
@@ -48,6 +55,7 @@ app.use("/", viewRouter);
 app.all("*", (req, res) => {
 	throw new AppError("This page does not exist on the server!", 404);
 });
+
 
 // Error handler
 app.use(errHandler);
