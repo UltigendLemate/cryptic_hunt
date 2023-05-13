@@ -3,7 +3,7 @@ require("dotenv").config({
 });
 //test
 
-const app = require("./app");
+const app = require("./app.js");
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
