@@ -42,6 +42,11 @@ router.get("/cpag", (req, res) => {
 		title: "The King",
 	});
 });
+router.get("/sherlock", (req, res) => {
+	res.status(200).render("sherlock", {
+		title: "Sherlock",
+	});
+});
 router.get("/donaldmustard", (req, res) => {
 	res.status(200).render("don", {
 		title: "Donald",
