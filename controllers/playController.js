@@ -53,51 +53,91 @@ exports.getViewQuestion = async (req) => {
 	return question;
 };
 
+
+
+
+// let flag = true;
+
+// Set the target date and time (May 15th, 2023, 10:52 PM IST)
+const targetDate = new Date("2023-05-15T23:15:00+05:30");
+
+// Get the current date and time
+// const now = new Date();
+
+// Get the current time in IST (Indian Standard Time)
+// const currentTimeIST = now.toLocaleString("en-US", { timeZone: "Asia/Kolkata", hour12: false });
+
+// Check if the current time is past the target date and time
+
+
 // 02. Checks user answer for its level
-exports.checkAnswer = catchAsync(async (req, res, next) => {
-	const { level, username } = req.user;
-	const question = await Question.findOne({ level }).select("+answer");
 
-	if (!question) {
-		throw new AppError("This question does not exist. (yet?).", 403);
-	}
-
-	await Response.create({
-		answer: req.body.answer,
-		level,
-		username,
-	});
-
-	if (question.answer !== req.body.answer) {
-		throw new AppError("Wrong answer, please try again", 400);
-	}
-
-	if (question.level + 1 >= (await getTotalQuestions())) {
+	exports.checkAnswer = catchAsync(async (req, res, next) => {
+		const currentTimeIST = req.body.now.toLocaleString("en-US", { timeZone: "Asia/Kolkata", hour12: false });
+		if (new Date(currentTimeIST) < targetDate) {
+			
+		  
+		const { level, username } = req.user;
+		const question = await Question.findOne({ level }).select("+answer");
+	
+		if (!question) {
+			throw new AppError("This question does not exist. (yet?).", 403);
+		}
+	
+		await Response.create({
+			answer: req.body.answer,
+			level,
+			username,
+		});
+	
+		if (question.answer !== req.body.answer) {
+			throw new AppError("Wrong answer, please try again", 400);
+		}
+	
+		if (question.level + 1 >= (await getTotalQuestions())) {
+			const newLevel = question.level + 1;
+	
+			await User.findByIdAndUpdate(req.user._id, {
+				level: newLevel,
+				lastSolved: Date.now(),
+			});
+	
+			return res.status(200).json({
+				status: "success",
+				message: "Congratulations you have completed Aurora 3.0!",
+			});
+		}
+	
 		const newLevel = question.level + 1;
-
+	
 		await User.findByIdAndUpdate(req.user._id, {
 			level: newLevel,
 			lastSolved: Date.now(),
 		});
-
-		return res.status(200).json({
+	
+		res.status(200).json({
 			status: "success",
-			message: "Congratulations you have completed Aurora 3.0!",
+			message: `Welcome to level ${newLevel} `,
 		});
 	}
+	else {
 
-	const newLevel = question.level + 1;
+		  return res.status(403).json({
+			status: "error",
+			message: "The hunt has ended",
+		  });
+	  }
 
-	await User.findByIdAndUpdate(req.user._id, {
-		level: newLevel,
-		lastSolved: Date.now(),
 	});
 
-	res.status(200).json({
-		status: "success",
-		message: `Welcome to level ${newLevel} `,
-	});
-});
+
+
+
+
+
+
+
+
 
 // 03. Get the game dashboard
 exports.getDashboard = catchAsync(async (req, res, next) => {
