@@ -1,13 +1,15 @@
 // submitting login form
 const questionForm = document.querySelector(".question-form");
 
-const submitAnswer = async (answer) => {
+const submitAnswer = async (answer,now) => {
 	try {
+		
 		const res = await axios({
 			method: "POST",
 			url: "/api/v1/play",
 			data: {
 				answer,
+				now,
 			},
 		});
 		M.toast({
@@ -27,7 +29,8 @@ if (questionForm) {
 	questionForm.addEventListener("submit", (e) => {
 		e.preventDefault();
 		const answer = document.getElementById("answer").value;
-
-		submitAnswer(answer);
+		const now = new Date();
+		
+		submitAnswer(answer,now);
 	});
 }
