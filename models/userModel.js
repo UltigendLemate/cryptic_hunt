@@ -18,6 +18,12 @@ const userSchema = new mongoose.Schema({
 		enum: ["user", "admin"],
 		default: "user",
 	},
+
+	path:{
+		type: String,
+		enum: ["a", "b" , "c"],
+		default: "a",
+	},
 	level: {
 		type: Number,
 		default: 0,
