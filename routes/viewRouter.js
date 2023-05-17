@@ -47,6 +47,11 @@ router.get("/ExZRawwR", (req, res) => {
 		title: "THE MASTER",
 	});
 });
+router.get("/a12mkLO", (req, res) => {
+	res.status(200).render("finalanswer", {
+		title: "THE MASTER",
+	});
+});
 router.get("/koiladkihai", (req, res) => {
 	res.status(200).render("koiladkihai", {
 		title: "nice",
