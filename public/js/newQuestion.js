@@ -1,7 +1,7 @@
 // submitting login form
 const loginForm = document.querySelector(".login-form");
 
-const loginUser = async (problem, answer,  level) => {
+const loginUser = async (problem, answer,  level,title) => {
 	try {
 		const res = await axios({
 			method: "POST",
@@ -10,7 +10,8 @@ const loginUser = async (problem, answer,  level) => {
 				problem,
                 answer, 
                
-                level
+                level, 
+				title
 			},
 		});
 		M.toast({
@@ -31,6 +32,7 @@ loginForm.addEventListener("submit", (e) => {
 	const answer = document.getElementById("answer").value;
 	// const hint = document.getElementById("hint").value;
 	const level = document.getElementById("level").value;
+	const title = document.getElementById("title").value;
 
-	loginUser(problem, answer, level);
+	loginUser(problem, answer, level, title);
 });

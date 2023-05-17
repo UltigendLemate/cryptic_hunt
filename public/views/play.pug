@@ -7,7 +7,7 @@ block content
     if question.completed
       h2.text-5xl Congratulations!
     else 
-      h3.text-5xl.font-bold Level #{user.level}
+      h3.text-5xl.font-bold Level #{user.level} : Vroom Vroom
       h4(class = "text-lg text-center md:text-3xl mt-10" id="problemStatement")
         | !{question.problem} 
       if question.level == 15
