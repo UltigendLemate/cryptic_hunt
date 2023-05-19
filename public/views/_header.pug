@@ -7,7 +7,8 @@ header
       //-   a(href="/" class='md:block hidden') 
       //-     img(src="../img/discord.svg", alt="" class='h-[40px]')
       li: a(href="/leaderboard" class='md:block hidden hover:text-cyan-300 duration-200') Leaderboard
-      li: a(href="/leaderboard" class='md:block hidden hover:text-cyan-300 duration-200') Discord
+      li: a(href="https://discord.gg/ExZRawwR" class='md:block hidden hover:text-cyan-300 duration-200') Discord
+      li: a(href="/format" class='md:block hidden hover:text-cyan-300 duration-200') Format
       if user
         li: a(href="/play" class='md:block hidden hover:text-cyan-300 duration-200') Play 
         li: .logout(onclick='checkLogout()' class='md:block hidden hover:text-cyan-300 duration-200')= `@${user.username}`
@@ -26,7 +27,8 @@ body
       //-   a(href="/" class='') 
       //-     img(src="../img/discord.svg", alt="" class='')
       li: a(href="/leaderboard" class='hover:text-cyan-300 duration-200') Leaderboard
-      li: a(href="/leaderboard" class='hover:text-cyan-300 duration-200') Discord
+      li: a(href="https://discord.gg/ExZRawwR" class='hover:text-cyan-300 duration-200') Discord
+      li: a(href="/format" class='hover:text-cyan-300 duration-200') Format
       if user
         li: a(href="/play" class='hover:text-cyan-300 duration-200') Play 
         li: .logout(onclick='checkLogout()' class='hover:text-cyan-300 duration-200')= `@${user.username}`
