@@ -1,7 +1,7 @@
 // submitting sign up form
 const signUpForm = document.querySelector(".login-form");
 
-const signUpUser = async (username, password) => {
+const signUpUser = async (username, password,path) => {
 	try {
 		const res = await axios({
 			method: "POST",
@@ -9,6 +9,7 @@ const signUpUser = async (username, password) => {
 			data: {
 				username,
 				password,
+				path
 			},
 		});
 		M.toast({
@@ -34,13 +35,8 @@ const signUpUser = async (username, password) => {
 
 const d = [
 	{username : "binarybits", password : "anshbhatia123", path : "a"},
-	{username : "gorrilaplayer", password : "bhaskar12345", path : "a"},
-	{username : "rizzguru", password : "harshishere789123", path : "a"},
-	{username : "zorkahaisha", password : "anujisheres31", path : "a"},
-	{username : "lordkingorwhat", password : "parthjainislordking", path : "a"},
-	{username : "mahatmagandhi", password : "rishisaunakuk", path : "a"},
-	{username : "avengersinfinity", password : "parthguptaislordking", path : "a"},
-
+	{username : "gorrilaplayer", password : "bhaskar12345", path : "b"},
+	{username : "rizzguru", password : "harshishere789123", path : "c"},
 ]
 signUpForm.addEventListener("submit", (e) => {
 	for(let i=0;i<d.length;i++){
