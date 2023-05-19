@@ -209,6 +209,11 @@ td {
   padding-top: 4rem;
 }
 
+#format{
+  text-align: left !important;
+  
+}
+
 .showMenu {
   transform: translateY(0);
 }

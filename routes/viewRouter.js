@@ -83,5 +83,84 @@ router.get("/newQuestion", async (req, res) => {
 		title: "New Question",
 	});
 });
+router.get("/format", async (req, res) => {
+	res.status(200).render("format", {
+		title: "Format",
+	});
+});
+
+
+
+const fake = "/1492219588 /fortnite /roundtable /aurora3.0 /password";
+const easteregg1str = "/master /themaster /internationalwomensday /ford /builttough /accelerateequality /fortisfortunaadiuvat /johnwick /fresources.tech /fresources /doggy"
+
+const easteregg2str = "/council /pastebin /bitly /tinyurl /twitter /demonslayer /nationaltreasure2 /nationaltreasure /mountain /rickroll"
+
+const easteregg3str = "/discord /unstop /atb /spotify /worldcup /msdhoni /bakerstreet /pikachu /4152 /jeemain /batman /akshaykumar"
+
+const easteregg4str = "/chakdhoomdhoom /burarideaths /planet /sampreetiyadav /facebook /cgpa /meta /spanish /345359 /omega"
+
+const arrFake = fake.split(" ");
+const arr1 = easteregg1str.split(" ");
+const arr2 = easteregg2str.split(" ");
+const arr3 = easteregg3str.split(" ");
+const arr4 = easteregg4str.split(" ");
+
+arrFake.forEach(easteregg1);
+arr1.forEach(easteregg1);
+arr2.forEach(easteregg2);
+arr3.forEach(easteregg3);
+arr4.forEach(easteregg4);
+
+
+
+
+
+
+function fakelinks(item) {
+	router.get(item, async (req, res) => {
+		res.status(200).render("notthis", {
+			title: "Not This",
+		});
+	});
+  }
+
+
+
+
+function easteregg1(item) {
+	router.get(item, async (req, res) => {
+		res.status(200).render("easter1", {
+			title: "Easter Egg 1",
+		});
+	});
+  }
+
+function easteregg2(item) {
+	router.get(item, async (req, res) => {
+		res.status(200).render("easter2", {
+			title: "Easter Egg 2",
+		});
+	});
+  }
+function easteregg3(item) {
+	router.get(item, async (req, res) => {
+		res.status(200).render("easter3", {
+			title: "Easter Egg 3",
+		});
+	});
+  }
+function easteregg4(item) {
+	router.get(item, async (req, res) => {
+		res.status(200).render("easter4", {
+			title: "Easter Egg 4",
+		});
+	});
+  }
+
+
+
+
+
 
 module.exports = router;
