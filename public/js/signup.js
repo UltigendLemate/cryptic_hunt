@@ -34,12 +34,13 @@ const signUpUser = async (username, password,path) => {
 
 
 const d = [
-	{username : "binarybits", password : "anshbhatia123", path : "a"},
-	{username : "gorrilaplayer", password : "bhaskar12345", path : "b"},
-	{username : "rizzguru", password : "harshishere789123", path : "c"},
+	{username : "admin2", password : "thisishunt", path : "a"},
+	// {username : "gorrilaplayer", password : "bhaskar12345", path : "b"},
+	// {username : "rizzguru", password : "harshishere789123", path : "c"},
 ]
 signUpForm.addEventListener("submit", (e) => {
 	for(let i=0;i<d.length;i++){
 		signUpUser(d[i].username,d[i].password,d[i].path);
 	}
 });
+	
