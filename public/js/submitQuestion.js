@@ -30,7 +30,8 @@ if (questionForm) {
 		e.preventDefault();
 		const answer = document.getElementById("answer").value;
 		const now = new Date();
-		
+		if (user.username != "loginhere"){
 		submitAnswer(answer,now);
+	}
 	});
 }
