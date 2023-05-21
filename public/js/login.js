@@ -27,6 +27,17 @@ loginForm.addEventListener("submit", (e) => {
 	e.preventDefault();
 	const username = document.getElementById("username").value;
 	const password = document.getElementById("password").value;
+	if (username === "loginhere" && password === "aurora3.0") {
+		M.toast({ html: `Good boy. Answer is aurora_i5_fun`, classes: "success-toast" });
+		return;
+	}
+	else if (username === "loginhere") {
+		M.toast({ html: `This aint gonna work boy`, classes: "error-toast" });
+		return;
+
+	}
+	else{
 
 	loginUser(username, password);
+	}
 });

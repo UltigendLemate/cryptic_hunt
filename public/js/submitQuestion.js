@@ -3,7 +3,6 @@ const questionForm = document.querySelector(".question-form");
 
 const submitAnswer = async (answer,now) => {
 	try {
-		
 		const res = await axios({
 			method: "POST",
 			url: "/api/v1/play",
@@ -30,8 +29,8 @@ if (questionForm) {
 		e.preventDefault();
 		const answer = document.getElementById("answer").value;
 		const now = new Date();
-		if (user.username != "loginhere"){
+		
+
 		submitAnswer(answer,now);
-	}
 	});
 }
