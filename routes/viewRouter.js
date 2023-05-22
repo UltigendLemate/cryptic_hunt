@@ -42,7 +42,7 @@ router.get("/cpag", (req, res) => {
 		title: "The King",
 	});
 });
-router.get("/ExZRawwR", (req, res) => {
+router.get("/9Q6mnwWdzM", (req, res) => {
 	res.status(200).render("master", {
 		title: "THE MASTER",
 	});
