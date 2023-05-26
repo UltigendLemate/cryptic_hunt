@@ -83,6 +83,14 @@ router.get("/newQuestion", async (req, res) => {
 		title: "New Question",
 	});
 });
+router.get("/if0undthe3aster", async (req, res) => {
+	res.status(200).render("easter5", {
+		title: "Easter",
+	});
+});
+
+
+
 router.get("/format", async (req, res) => {
 	res.status(200).render("format", {
 		title: "Format",
