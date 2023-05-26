@@ -28,6 +28,10 @@ const userSchema = new mongoose.Schema({
 		type: Number,
 		default: 0,
 	},
+	additionalPts: {
+		type: Number,
+		default: 0,
+	},
 	lastSolved: {
 		type: Date,
 		default: Date.now(),

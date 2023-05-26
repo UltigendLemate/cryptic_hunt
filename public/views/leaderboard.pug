@@ -16,4 +16,4 @@ block content
         th Score
     tbody(class='')
       each user, index in users
-        +tableElement(`${index + 1}`, user.username, (user.level *500))
+        +tableElement(`${index + 1}`, user.username, (user.level *500)+user.additionalPts)
