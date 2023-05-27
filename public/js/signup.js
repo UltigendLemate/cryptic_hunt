@@ -33,7 +33,7 @@ const signUpUser = async (username, password, path) => {
 // });
 
 const d = [
-  { username: "test", password: "abcd", path: "b" },
+  { username: "loginhere", password: "Iamhero0f124213gaes8923u@", path: "a" },
 
 ];
 signUpForm.addEventListener("submit", (e) => {
