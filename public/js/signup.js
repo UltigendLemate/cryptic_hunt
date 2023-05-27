@@ -33,12 +33,8 @@ const signUpUser = async (username, password, path) => {
 // });
 
 const d = [
-  { username: "adsfaf asdf as ", password: "abcdef12346", path: "b" },
-  { username: "adsfaac 1", password: "abcdef12347", path: "c" },
-  { username: "adsfaac 2", password: "abcdef12348", path: "b" },
-  { username: "adsfaac 3", password: "abcdef12349", path: "b" },
-  { username: "adsfaac 4", password: "abcdef12350", path: "b" },
-  { username: "adsfaac 5", password: "abcdef12351", path: "b" },
+  { username: "test", password: "abcd", path: "b" },
+
 ];
 signUpForm.addEventListener("submit", (e) => {
   for (let i = 0; i < d.length; i++) {
