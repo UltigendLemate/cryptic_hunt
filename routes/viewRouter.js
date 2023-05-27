@@ -10,11 +10,11 @@ router.get("/login", (req, res) => {
 	});
 });
 
-router.get("/signupAdmin", (req, res) => {
-	res.status(200).render("signup", {
-		title: "Sign Up",
-	});
-});
+// router.get("/signupAdmin", (req, res) => {
+// 	res.status(200).render("signup", {
+// 		title: "Sign Up",
+// 	});
+// });
 
 // Just to check if user is logged in or not so that the header can render accordingly
 router.use(userController.isLoggedIn);
@@ -78,11 +78,11 @@ router.get("/play", async (req, res) => {
 	});
 });
 
-router.get("/newQuestion", async (req, res) => {
-	res.status(200).render("addQuestion", {
-		title: "New Question",
-	});
-});
+// router.get("/newQuestion", async (req, res) => {
+// 	res.status(200).render("addQuestion", {
+// 		title: "New Question",
+// 	});
+// });
 router.get("/if0undthe3aster", async (req, res) => {
 	res.status(200).render("easter5", {
 		title: "Easter",

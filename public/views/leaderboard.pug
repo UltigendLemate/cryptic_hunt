@@ -1,19 +1,60 @@
-extends base
+<!DOCTYPE html>
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    link(type="text/css" href="/css/index.css" rel="stylesheet")
+    script(src='https://cdn.tailwindcss.com')
+    script(type="module" src="/js/base.js" )
+    //- script(src="/js/require.js") 
 
-mixin tableElement(rank, name, level)
-  tr
-    td= rank
-    td= name
-    td= level
+    //- adding favicon
+    link(rel='icon', href='/favicon.ico', type='image/x-icon')
 
-block content 
-  h1(class='pt-16') leaderboard
-  table(class="text-white centered leaderboard sm:mb-[30px] mb-[50px] ")
-    thead
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    title Aurora 3.0 | #{title}
+
+
+  body( class='bg-black text-white  text-xl  text-left m-0 pb-20'  )
+    //- div( class='absolute top-0 bottom-0 left-0 right-0 -z-10 max-h-[100vh] max-w-[100vw] imp' id='container')
+    // HEADER
+    include _header
+    
+    mixin tableElement(rank, name, level)
       tr
-        th Rank
-        th Name
-        th Score
-    tbody(class='')
-      each user, index in users
-        +tableElement(`${index + 1}`, user.username, (user.level *500)+user.additionalPts)
+        td= rank
+        td= name
+        td= level
+
+    block content 
+      h1(class='pt-16') Leaderboard
+      table(class="text-white centered leaderboard sm:mb-[30px] mb-[50px] ")
+        thead
+          tr
+            th Rank
+            th Name
+            th Score
+        tbody(class='')
+          each user, index in users
+            +tableElement(`${index + 1}`, user.username, (user.level *500)+user.additionalPts)
+      
+
+    include _footer
+    // SCRIPTS
+    block scripts
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+      script(src='/js/logout.js')
+
+
+        
+      
+      
+
+
+
+
+
+  
