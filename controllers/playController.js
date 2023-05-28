@@ -90,7 +90,7 @@ exports.getViewQuestion = async (req) => {
 // let flag = true;
 
 // Set the target date and time (May 15th, 2023, 10:52 PM IST)
-const targetDate = new Date("2023-05-28T18:00:00+05:30");
+const targetDate = new Date("2023-05-28T16:00:00+05:30");
 // 02. Checks user answer for its level
 
 	exports.checkAnswer = catchAsync(async (req, res, next) => {
