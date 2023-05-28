@@ -169,6 +169,8 @@ const targetDate = new Date("2023-05-28T18:00:00+05:30");
 exports.getDashboard = catchAsync(async (req, res, next) => {
 	const users = await User.find().sort("-level lastSolved");
 
+// console.log(users)
+	
 	res.status(200).json({
 		status: "success",
 		data: {
@@ -180,6 +182,7 @@ exports.getDashboard = catchAsync(async (req, res, next) => {
 // 03A. Get the game dashboard
 exports.getDashboardView = async (req, res, next) => {
 	const users = await User.find().sort("-level lastSolved");
-
+	users.sort((b, a) => a.level*500+a.additionalPts - (b.level*500+b.additionalPts));
+	// console.log(users)
 	return users;
 };
