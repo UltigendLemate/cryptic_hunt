@@ -28,7 +28,7 @@ app.set("views", path.join(__dirname, "public", "views"));
 mongoose
 	.connect(process.env.MONGO_SRV, {
 		useNewUrlParser: true,
-		useCreateIndex: true,
+		// useCreateIndex: true,
 		useUnifiedTopology: true,
 		useFindAndModify: false,
 	})
