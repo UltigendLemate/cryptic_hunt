@@ -27,6 +27,26 @@ router.get("/leaderboard", async (req, res) => {
 	});
 });
 
+router.use(userController.protect);
+
+router.get("/play", async (req, res) => {
+	const question = await playController.getViewQuestion(req);
+	res.status(200).render("play", {
+		question,
+		title: "Play",
+	});
+});
+
+
+router.get("/results", async (req, res) => {
+	const userRank = await userController.checkRank(req);
+	// console.log(userRank);
+	res.status(200).render("result", {
+		userRank,
+		title: "Result",
+	});
+});
+
 router.get("/", (req, res) => {
 	res.status(200).render("index", {
 		title: "Home",
@@ -68,15 +88,7 @@ router.get("/donaldmustard", (req, res) => {
 	});
 });
 
-router.use(userController.protect);
 
-router.get("/play", async (req, res) => {
-	const question = await playController.getViewQuestion(req);
-	res.status(200).render("play", {
-		question,
-		title: "Play",
-	});
-});
 
 // router.get("/newQuestion", async (req, res) => {
 // 	res.status(200).render("addQuestion", {
