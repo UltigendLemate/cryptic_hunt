@@ -214,6 +214,13 @@ td {
   
 }
 
+.bggg{
+  border-radius: 50px;
+background: #e0e0e010;
+box-shadow:  1px 1px 50px #bebebe30,
+             -1px -1px 50px #ffffff34;
+}
+
 .showMenu {
   transform: translateY(0);
 }
