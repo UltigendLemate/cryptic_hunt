@@ -4,21 +4,19 @@ const Response = require("../models/responseModel");
 
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
+//basically these are 3 different paths which the differnt users will follow
+//these were made to reduce the cheating rate in the game so that every team has a different path. the total questions will remain the same yes but the path will be different
+
+//every user/team has a path variable in the databse. for ex if they're path=a then after 0 they'll get 1 then they'll get 2 and so on. if they're path=b, first they';; get 0 then 2 then 1 and so on.
 
 const quesState ={
+	// 			0							1						2
 	"a" : ['645fa1a08e0bb038d4c95f4f', '645fa1848e0bb038d4c95f41', '645fa3da8e0bb038d4c95fb4', '6465332d6ee21c5708805f86', '64653459a25b5a32c8ef8a18', '646f404c48009225c4d881bb', '645fa3f08e0bb038d4c95fbb', '64653ac0a25b5a32c8ef8a3b', '645fa4138e0bb038d4c95fc2', '645fa4e56e079a27cc454104', '6465348ca25b5a32c8ef8a1d', '645fa4ff6e079a27cc45410b', '645fa7b6c2cafc1b5896985a', '645fa5f4c2cafc1b5896983e', '645fa610c2cafc1b58969845', '645fa8dd47fa6b429cd8fc26', '645fa87947fa6b429cd8fc1f', '645fa625c2cafc1b5896984c', '64653506a25b5a32c8ef8a22', '6465352ca25b5a32c8ef8a27', '645fa63ec2cafc1b58969853', '645fa7d2c2cafc1b58969861', '6465354fa25b5a32c8ef8a2c', '645fa91b47fa6b429cd8fc2d', '64653566a25b5a32c8ef8a31', '64653584a25b5a32c8ef8a36'],
 
+	// `	0							     2									1
 	"b" : ['645fa1a08e0bb038d4c95f4f', '64653459a25b5a32c8ef8a18', '6465332d6ee21c5708805f86', '645fa1848e0bb038d4c95f41', '645fa3da8e0bb038d4c95fb4', '646f404c48009225c4d881bb', '645fa3f08e0bb038d4c95fbb', '645fa4138e0bb038d4c95fc2', '645fa4e56e079a27cc454104', '64653ac0a25b5a32c8ef8a3b', '645fa7b6c2cafc1b5896985a', '645fa5f4c2cafc1b5896983e', '6465348ca25b5a32c8ef8a1d', '645fa4ff6e079a27cc45410b', '645fa8dd47fa6b429cd8fc26', '645fa610c2cafc1b58969845', '645fa625c2cafc1b5896984c', '645fa87947fa6b429cd8fc1f', '6465352ca25b5a32c8ef8a27', '64653506a25b5a32c8ef8a22', '645fa63ec2cafc1b58969853', '645fa7d2c2cafc1b58969861', '6465354fa25b5a32c8ef8a2c', '645fa91b47fa6b429cd8fc2d', '64653566a25b5a32c8ef8a31', '64653584a25b5a32c8ef8a36'],
 
 	"c" : ['645fa1a08e0bb038d4c95f4f', '645fa3da8e0bb038d4c95fb4', '645fa1848e0bb038d4c95f41', '64653459a25b5a32c8ef8a18', '6465332d6ee21c5708805f86', '646f404c48009225c4d881bb', '645fa4138e0bb038d4c95fc2', '645fa3f08e0bb038d4c95fbb', '645fa4e56e079a27cc454104', '64653ac0a25b5a32c8ef8a3b', '645fa4ff6e079a27cc45410b', '645fa5f4c2cafc1b5896983e', '645fa7b6c2cafc1b5896985a', '6465348ca25b5a32c8ef8a1d', '645fa87947fa6b429cd8fc1f', '645fa625c2cafc1b5896984c', '645fa610c2cafc1b58969845', '645fa8dd47fa6b429cd8fc26', '64653506a25b5a32c8ef8a22', '645fa63ec2cafc1b58969853', '6465352ca25b5a32c8ef8a27', '645fa7d2c2cafc1b58969861', '645fa91b47fa6b429cd8fc2d', '6465354fa25b5a32c8ef8a2c', '64653566a25b5a32c8ef8a31', '64653584a25b5a32c8ef8a36']
-
-
-
-	
-
-
-
-
 
 
 }

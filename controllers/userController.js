@@ -151,6 +151,7 @@ exports.logout = (req, res, next) => {
 
 
 // 6. Checking rank of that user
+// xD made this list using python. could've used js as well but was lazy.
 const rankData =[
 
 	{
