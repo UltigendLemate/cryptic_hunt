@@ -11,13 +11,19 @@ const questionSchema = new mongoose.Schema({
 		lowercase: true,
 		select: false,
 	},
+	title: {
+		type: String,
+		required: [true, "Please provide the title!"],
+	},
 	level: {
 		type: Number,
 		min: 0,
-		unique: true,
+		// unique: true,
 		required: [true, "Please provide level number!"],
 	},
 });
+
+
 
 const Question = mongoose.model("Question", questionSchema);
 

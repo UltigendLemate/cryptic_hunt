@@ -17,7 +17,14 @@ router.get("/signupAdmin", (req, res) => {
 });
 
 // Just to check if user is logged in or not so that the header can render accordingly
-router.use(userController.isLoggedIn);
+router.get("/", (req, res) => {
+	res.status(200).render("index", {
+		title: "Home",
+	});
+});
+
+
+router.use(userController.isLoggedIn);	
 
 router.get("/leaderboard", async (req, res) => {
 	const users = await playController.getDashboardView();
@@ -27,31 +34,7 @@ router.get("/leaderboard", async (req, res) => {
 	});
 });
 
-router.get("/", (req, res) => {
-	res.status(200).render("index", {
-		title: "Home",
-	});
-});
-router.get("/henrycreel", (req, res) => {
-	res.status(200).render("henry", {
-		title: "Creeeeel",
-	});
-});
-router.get("/cpag", (req, res) => {
-	res.status(200).render("cpag", {
-		title: "The King",
-	});
-});
-router.get("/sherlock", (req, res) => {
-	res.status(200).render("sherlock", {
-		title: "Sherlock",
-	});
-});
-router.get("/donaldmustard", (req, res) => {
-	res.status(200).render("don", {
-		title: "Donald",
-	});
-});
+
 
 router.use(userController.protect);
 
@@ -63,10 +46,44 @@ router.get("/play", async (req, res) => {
 	});
 });
 
+
+router.get("/results", async (req, res) => {
+	const userRank = await userController.checkRank(req);
+	// console.log(userRank);
+	res.status(200).render("result", {
+		userRank,
+		title: "Result",
+	});
+});
+
+
+
 router.get("/newQuestion", async (req, res) => {
 	res.status(200).render("addQuestion", {
 		title: "New Question",
 	});
 });
+
+
+
+router.get("/format", async (req, res) => {
+	res.status(200).render("format", {
+		title: "Format",
+	});
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 module.exports = router;

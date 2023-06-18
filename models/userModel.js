@@ -10,7 +10,7 @@ const userSchema = new mongoose.Schema({
 	password: {
 		type: String,
 		required: true,
-		minlength: [8, "Please have atleast 8 characters!"],
+		// minlength: [8, "Please have atleast 8 characters!"],
 		select: false,
 	},
 	role: {
@@ -18,7 +18,17 @@ const userSchema = new mongoose.Schema({
 		enum: ["user", "admin"],
 		default: "user",
 	},
+
+	path:{
+		type: String,
+		enum: ["a", "b" , "c"],
+		default: "a",
+	},
 	level: {
+		type: Number,
+		default: 0,
+	},
+	additionalPts: {
 		type: Number,
 		default: 0,
 	},

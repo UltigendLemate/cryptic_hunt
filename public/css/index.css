@@ -65,7 +65,7 @@
   padding: 0 20px;
   text-align: center;
 }
-
+/* asd  */
 #content-area {
   width: 100vw;
   overflow-x: hidden;
@@ -207,6 +207,18 @@ td {
   color: white;
   list-style: none;
   padding-top: 4rem;
+}
+
+#format{
+  text-align: left !important;
+  
+}
+
+.bggg{
+  border-radius: 50px;
+background: #e0e0e010;
+box-shadow:  1px 1px 50px #bebebe30,
+             -1px -1px 50px #ffffff34;
 }
 
 .showMenu {

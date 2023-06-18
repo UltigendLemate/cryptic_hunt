@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+html(lang='en')
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css")
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    link(type="text/css" href="/css/index.css" rel="stylesheet")
+    script(src='https://cdn.tailwindcss.com')
+    script(type="module" src="/js/base.js" )
+    //- script(src="/js/require.js") 
+
+    //- adding favicon
+    link(rel='icon', href='/favicon.ico', type='image/x-icon')
+
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js")
+    title Aurora 3.0 | #{title}
+
+
+  body( class='bg-black text-white  text-xl  text-left m-0 pb-20'  )
+    //- div( class='absolute top-0 bottom-0 left-0 right-0 -z-10 max-h-[100vh] max-w-[100vw] imp' id='container')
+    // HEADER
+    include _header
+    p(class="  md:mx-24 px-10 pt-10" id="format") Here goes the format of this hunt.
+        br
+        | The leaderboard will be based on your score or points you earn during the next 24 hours. There are total 4 ways to earn points :
+        br 
+        br
+        span.font-bold 1) By solving levels in the actual hunt. 
+        | (500pts for each level, leaderboard gets updated immediately)
+        br
+        br
+        span.font-bold 2) By reaching the final destination of easter eggs. 
+        br
+        span.underline What are easter eggs? 
+        |mini offline paths which you have to complete in a given time limit. You'll understand when you reach one :)
+        br
+        span.underline How will I reach an easter egg? 
+        | By accident. There's no for-sure way to reach an easter egg. You will only land on an easter egg by mistake. By putting a wrong link. By scanning some wrong qr code at some wrong place or maybe using the non relevant parts of a question or maybe by trying every possible backlink in a level. 
+        br
+        | Keep trying, you might mistakenly reach an easter egg xD
+        br
+        span.underline How many points per easter egg? 
+        | That is variable. That depends on how fast you can complete the easter. You'll understand if you reach one.
+        br
+        br
+        span.font-bold 3) By outperforming other participants in specific tasks. 
+        | Some specific tasks will be released on the discord server with a time limit. For example : Do xyz (9PM - 2AM). The team which performs the best in that task in the time interval 9pm to 2am will get 200 points. Result will be declared within 1hr of the upper limit of the time interval , i.e, by 3AM here.
+        br
+        br
+        span.font-bold 4) By winning the bonus games xD. 
+        | We have planned certain bonus games for all of you. The games will be played in regular intervals. Wait for the announcement of the first game. Only 1 person can play a particular bonus game from 1 team. Rest members have to spectate. Winning team(s) will get 100-200 points each. 
+        
+
+    include _footer
+    // SCRIPTS
+    block scripts
+      script(src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js')
+      script(src='/js/logout.js')
+
+
+        
+      
+      
+
+
+
+
+
+  
